@@ -1,0 +1,260 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#0f131d",
+              "on-tertiary-fixed": "#1a1c1c",
+              "primary-container": "#d4af37",
+              "on-secondary-fixed": "#151c29",
+              "inverse-primary": "#735c00",
+              surface: "#0f131d",
+              "surface-container-highest": "#313540",
+              "on-secondary-container": "#b1b8cb",
+              "surface-variant": "#313540",
+              "surface-bright": "#353944",
+              "tertiary-container": "#b2b3b3",
+              "inverse-on-surface": "#2c303b",
+              background: "#0f131d",
+              "inverse-surface": "#dfe2f0",
+              "on-primary-fixed": "#241a00",
+              secondary: "#c0c6d9",
+              primary: "#f2ca50",
+              "on-error": "#690005",
+              "surface-container-lowest": "#0a0e18",
+              "on-primary-fixed-variant": "#574500",
+              "on-surface": "#dfe2f0",
+              "surface-container-high": "#262a34",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-container": "#1b1f2a",
+              outline: "#99907c",
+              "on-primary": "#3c2f00",
+              "error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#454747",
+              "on-surface-variant": "#d0c5af",
+              "primary-fixed-dim": "#e9c349",
+              "secondary-fixed": "#dce2f6",
+              "surface-tint": "#e9c349",
+              "on-tertiary": "#2f3131",
+              "on-secondary-fixed-variant": "#404756",
+              "outline-variant": "#4d4635",
+              "secondary-fixed-dim": "#c0c6d9",
+              "on-primary-container": "#554300",
+              "primary-fixed": "#ffe088",
+              "on-tertiary-container": "#434546",
+              "secondary-container": "#424958",
+              "on-error-container": "#ffdad6",
+              "on-background": "#dfe2f0",
+              tertiary: "#cecece",
+              "surface-container-low": "#171b26",
+              "on-secondary": "#29303f",
+              error: "#ffb4ab",
+              "tertiary-fixed-dim": "#c6c6c7",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "16px",
+              "touch-target-min": "48px",
+              base: "8px",
+              "container-padding": "20px",
+              "margin-mobile": "24px",
+            },
+            fontFamily: {
+              "headline-lg": ["Hanken Grotesk"],
+              "headline-md": ["Hanken Grotesk"],
+              "label-md": ["Hanken Grotesk"],
+              "body-md": ["Hanken Grotesk"],
+              "body-lg": ["Hanken Grotesk"],
+              "label-xl": ["Hanken Grotesk"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+              "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+              "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-xl": [
+                "20px",
+                { lineHeight: "24px", letterSpacing: "0.01em", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0f131d;
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #dfe2f0;
+      }
+      .brass-gradient {
+        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+      }
+      .musical-glow {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen overflow-hidden">
+    <!-- Mobile Container (390px fixed) -->
+    <main
+      class="w-[390px] h-[844px] bg-surface relative flex flex-col justify-between overflow-hidden"
+    >
+      <!-- Top App Bar (Shared Component Reference) -->
+      <header
+        class="fixed top-0 w-[390px] z-50 flex items-center justify-between px-margin-mobile h-touch-target-min bg-surface border-b border-outline-variant"
+      >
+        <span
+          class="material-symbols-outlined text-primary active:scale-95 duration-100 cursor-pointer"
+          >menu</span
+        >
+        <h1 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">
+          TROMBONE PRO
+        </h1>
+        <span
+          class="material-symbols-outlined text-primary active:scale-95 duration-100 cursor-pointer"
+          >account_circle</span
+        >
+      </header>
+      <!-- Background Decorative Element (Atmospheric Effect) -->
+      <div
+        class="absolute top-1/4 -right-20 w-64 h-64 rounded-full bg-primary/5 blur-[80px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-1/4 -left-20 w-64 h-64 rounded-full bg-primary/5 blur-[80px] pointer-events-none"
+      ></div>
+      <!-- Main Content Area -->
+      <section
+        class="flex-1 flex flex-col items-center justify-center px-margin-mobile pt-touch-target-min pb-32"
+      >
+        <!-- Hero Illustration / Icon -->
+        <div class="mb-12 relative">
+          <div
+            class="w-32 h-32 rounded-full border-2 border-primary/20 flex items-center justify-center musical-glow"
+          >
+            <span
+              class="material-symbols-outlined text-[64px] text-primary"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >music_note</span
+            >
+          </div>
+          <!-- Mini floaters -->
+          <span class="material-symbols-outlined absolute -top-2 -right-4 text-primary/40 text-xl"
+            >straighten</span
+          >
+          <span class="material-symbols-outlined absolute bottom-0 -left-6 text-primary/40 text-2xl"
+            >graphic_eq</span
+          >
+        </div>
+        <!-- Heading -->
+        <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-6 leading-tight">
+          Trombone <br />
+          Flash Cards
+        </h2>
+        <!-- Explanatory Text -->
+        <div class="space-y-4 text-center max-w-[280px]">
+          <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            You'll be shown a note on a bass clef staff.
+          </p>
+          <div class="w-12 h-0.5 bg-outline-variant mx-auto"></div>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Identify the note name or slide position. 20 questions per round.
+          </p>
+        </div>
+        <!-- Stats/Context Chips -->
+        <div class="mt-10 flex flex-wrap justify-center gap-2">
+          <div
+            class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-full border border-outline-variant"
+          >
+            <span class="material-symbols-outlined text-sm text-primary">timer</span>
+            <span class="font-label-md text-label-md text-on-surface-variant">Rapid Fire</span>
+          </div>
+          <div
+            class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-full border border-outline-variant"
+          >
+            <span class="material-symbols-outlined text-sm text-primary">grade</span>
+            <span class="font-label-md text-label-md text-on-surface-variant">Pro Level</span>
+          </div>
+        </div>
+      </section>
+      <!-- Sticky Bottom Action Area -->
+      <footer
+        class="absolute bottom-0 w-full px-margin-mobile pb-12 pt-6 bg-gradient-to-t from-surface via-surface to-transparent"
+      >
+        <button
+          class="w-full h-touch-target-min bg-primary-container text-on-primary-container font-label-xl text-label-xl rounded-xl brass-gradient shadow-lg active:scale-95 transition-all duration-150 flex items-center justify-center gap-2"
+        >
+          <span>Play</span>
+          <span class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <p class="text-center font-label-md text-label-md text-on-surface-variant mt-4 opacity-60">
+          Master the bass clef today
+        </p>
+      </footer>
+      <!-- Progress Placeholder (Contextual) -->
+      <div class="fixed top-[48px] left-0 w-full h-[2px] bg-surface-container">
+        <div class="h-full bg-primary/30 w-full"></div>
+      </div>
+    </main>
+    <!-- Bottom Nav Bar (Shared Component Reference - Suppressed for transactional/focused journey as per mandate, but structure kept for context if needed later) -->
+    <!-- Logic: Suppressed as per "Linear/Transactional" rule for a welcome screen. -->
+    <script>
+      // Micro-interaction for the "Play" button pulse
+      const playBtn = document.querySelector("button");
+
+      // Add a subtle parallax-like shift for the decorative glows based on mouse/tilt
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const glows = document.querySelectorAll(".blur-\\[80px\\]");
+
+        glows.forEach((glow, index) => {
+          const speed = (index + 1) * 20;
+          glow.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+      });
+
+      playBtn.addEventListener("mousedown", () => {
+        playBtn.classList.add("brightness-90");
+      });
+
+      playBtn.addEventListener("mouseup", () => {
+        playBtn.classList.remove("brightness-90");
+      });
+    </script>
+  </body>
+</html>
