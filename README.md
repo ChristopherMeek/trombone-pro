@@ -13,15 +13,15 @@ A mobile-first web quiz that drills beginner trombone players on note names and 
 
 ## Tech stack
 
-| Concern | Choice |
-|---|---|
-| Framework | React 19 |
+| Concern         | Choice                                   |
+| --------------- | ---------------------------------------- |
+| Framework       | React 19                                 |
 | Build toolchain | [Vite+](https://viteplus.dev) (`vp` CLI) |
-| Package manager | pnpm |
-| Language | TypeScript |
-| Styling | CSS Modules — no Tailwind |
-| Staff notation | [VexFlow 5](https://www.vexflow.com) |
-| Testing | Vitest + Testing Library |
+| Package manager | pnpm                                     |
+| Language        | TypeScript                               |
+| Styling         | CSS Modules — no Tailwind                |
+| Staff notation  | [VexFlow 5](https://www.vexflow.com)     |
+| Testing         | Vitest + Testing Library                 |
 
 ## Project structure
 
@@ -85,13 +85,13 @@ All CSS uses the tokens defined in `src/styles/tokens.css` as custom properties 
 
 Key decisions are recorded in [`docs/adr/`](docs/adr/):
 
-| ADR | Decision |
-|---|---|
+| ADR                                                   | Decision                                     |
+| ----------------------------------------------------- | -------------------------------------------- |
 | [0001](docs/adr/0001-balanced-question-type-split.md) | Balanced 10/10 question type split per round |
-| [0002](docs/adr/0002-static-svg-staff-rendering.md) | ~~Static SVG staff rendering~~ (superseded) |
-| [0003](docs/adr/0003-react-ui-framework.md) | React as UI framework |
-| [0004](docs/adr/0004-css-modules-for-styling.md) | CSS Modules — Tailwind explicitly rejected |
-| [0005](docs/adr/0005-vexflow-staff-rendering.md) | VexFlow for staff notation |
+| [0002](docs/adr/0002-static-svg-staff-rendering.md)   | ~~Static SVG staff rendering~~ (superseded)  |
+| [0003](docs/adr/0003-react-ui-framework.md)           | React as UI framework                        |
+| [0004](docs/adr/0004-css-modules-for-styling.md)      | CSS Modules — Tailwind explicitly rejected   |
+| [0005](docs/adr/0005-vexflow-staff-rendering.md)      | VexFlow for staff notation                   |
 
 ## Domain glossary
 
