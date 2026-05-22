@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: done
 
 # 06 — Summary Screen
 
@@ -18,20 +18,20 @@ The screen has: a medal/trophy icon in a circular container, "Round Complete" he
 
 ## Acceptance criteria
 
-- [ ] `App.tsx` renders `SummaryScreen` when `state.screen === 'summary'`
-- [ ] Summary Screen displays "Round Complete" as the main heading in `--color-primary`
-- [ ] A medal or award icon is displayed as a visual hero element
-- [ ] A white score card is displayed showing the Result as "{correctCount} / 20"
-- [ ] The score card includes a visual indicator (e.g. segmented bar or dots) reflecting the proportion correct, styled in brass gold
-- [ ] An encouraging message is shown below the score card (e.g. "Great job! Keep practising to master those slide positions.")
-- [ ] A "Play Again" button is displayed, full-width (minus margins), brass gold, minimum touch target height
-- [ ] Tapping "Play Again" dispatches `RESTART` (returning to `screen: 'welcome'`)
-- [ ] Background is `--color-surface` (`#0f131d`)
-- [ ] Layout is centred and works correctly at 390px viewport width
-- [ ] Styles are implemented with CSS Modules (no Tailwind)
-- [ ] The full Round flow is end-to-end navigable: Welcome → Quiz (20 questions) → Summary → Welcome
-- [ ] `vp check` passes
-- [ ] `vp test` passes
+- [x] `App.tsx` renders `SummaryScreen` when `state.screen === 'summary'`
+- [x] Summary Screen displays "Round Complete" as the main heading in `--color-primary`
+- [x] A medal or award icon is displayed as a visual hero element
+- [x] A white score card is displayed showing the Result as "{correctCount} / 20"
+- [x] The score card includes a visual indicator (e.g. segmented bar or dots) reflecting the proportion correct, styled in brass gold
+- [x] An encouraging message is shown below the score card (e.g. "Great job! Keep practising to master those slide positions.")
+- [x] A "Play Again" button is displayed, full-width (minus margins), brass gold, minimum touch target height
+- [x] Tapping "Play Again" dispatches `RESTART` (returning to `screen: 'welcome'`)
+- [x] Background is `--color-surface` (`#0f131d`)
+- [x] Layout is centred and works correctly at 390px viewport width
+- [x] Styles are implemented with CSS Modules (no Tailwind)
+- [x] The full Round flow is end-to-end navigable: Welcome → Quiz (20 questions) → Summary → Welcome
+- [x] `vp check` passes
+- [x] `vp test` passes
 
 ## Blocked by
 

@@ -16,7 +16,12 @@ export function App() {
   }
 
   if (state.screen === "summary") {
-    return <SummaryScreen />;
+    return (
+      <SummaryScreen
+        correctCount={state.correctCount}
+        onPlayAgain={() => dispatch({ type: "RESTART" })}
+      />
+    );
   }
 
   return null;

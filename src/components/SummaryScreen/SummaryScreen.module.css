@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100dvh;
+  background-color: var(--color-surface);
+  padding: var(--spacing-margin-mobile);
+  padding-top: 80px;
+  padding-bottom: var(--spacing-margin-mobile);
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.heroIcon {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-container-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.heading {
+  font: var(--font-headline-lg);
+  letter-spacing: var(--font-headline-lg-letter-spacing);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.scoreCard {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.score {
+  font: var(--font-headline-lg);
+  color: var(--color-on-primary);
+  margin: 0;
+}
+
+.segmentedBar {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.segmentFilled,
+.segmentEmpty {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.segmentFilled {
+  background-color: var(--color-primary);
+}
+
+.segmentEmpty {
+  background-color: var(--color-outline-variant);
+}
+
+.encouragingMessage {
+  font: var(--font-body-lg);
+  color: var(--color-on-surface-variant);
+  max-width: 320px;
+  margin: 0;
+  text-align: center;
+}
+
+.playAgainButton {
+  display: block;
+  width: 100%;
+  min-height: var(--spacing-touch-target-min);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: var(--radius-default);
+  font: var(--font-label-xl);
+  letter-spacing: var(--font-label-xl-letter-spacing);
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.playAgainButton:hover {
+  background-color: var(--color-primary-container);
+}
+
+.playAgainButton:active {
+  opacity: 0.9;
+}
