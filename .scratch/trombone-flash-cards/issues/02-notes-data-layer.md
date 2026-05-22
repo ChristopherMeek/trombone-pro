@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: done
 
 # 02 — Notes data layer
 
@@ -19,19 +19,19 @@ F2→6, G2→4, A2→2, B♭2→1, B2→7, C3→6, D3→4, E♭3→3, E3→2, F3
 
 ## Acceptance criteria
 
-- [ ] `NOTE_RANGE` exported array contains exactly 15 notes in order F2 → C4
-- [ ] Each note has a `name` string (e.g. `"B♭"`, `"E♭"`, `"F"`) using the flat symbol ♭, not `b`
-- [ ] Each note has a `canonicalPosition` integer matching the table in the PRD
-- [ ] Each note has a `vexflowKey` string in the correct format for VexFlow bass clef rendering (e.g. `"f/2"`, `"bb/3"`)
-- [ ] `getDistractors(noteIndex, 'position')` returns exactly 2 Distractor canonical position values
-- [ ] `getDistractors(noteIndex, 'name')` returns exactly 2 Distractor note name strings
-- [ ] Distractors are always different from the correct answer and from each other
-- [ ] For a note in the middle of the range, distractors are the two immediate neighbours
-- [ ] For the lowest note (F2), the window shifts up — no index below 0
-- [ ] For the highest note (C4), the window shifts down — no index beyond the last
-- [ ] All of the above are covered by unit tests using domain vocabulary from `CONTEXT.md`
-- [ ] `vp test` passes
-- [ ] `vp check` passes
+- [x] `NOTE_RANGE` exported array contains exactly 15 notes in order F2 → C4
+- [x] Each note has a `name` string (e.g. `"B♭"`, `"E♭"`, `"F"`) using the flat symbol ♭, not `b`
+- [x] Each note has a `canonicalPosition` integer matching the table in the PRD
+- [x] Each note has a `vexflowKey` string in the correct format for VexFlow bass clef rendering (e.g. `"f/2"`, `"bb/3"`)
+- [x] `getDistractors(noteIndex, 'position')` returns exactly 2 Distractor canonical position values
+- [x] `getDistractors(noteIndex, 'name')` returns exactly 2 Distractor note name strings
+- [x] Distractors are always different from the correct answer and from each other
+- [x] For a note in the middle of the range, distractors are the two immediate neighbours
+- [x] For the lowest note (F2), the window shifts up — no index below 0
+- [x] For the highest note (C4), the window shifts down — no index beyond the last
+- [x] All of the above are covered by unit tests using domain vocabulary from `CONTEXT.md`
+- [x] `vp test` passes
+- [x] `vp check` passes
 
 ## Blocked by
 
