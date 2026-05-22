@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Expose vite-plus CLI
+        run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
+
       - name: Check (format, lint, types)
         run: vp check
 
