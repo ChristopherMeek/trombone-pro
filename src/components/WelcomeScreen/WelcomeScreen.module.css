@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100dvh;
+  background-color: var(--color-surface);
+  padding: var(--spacing-margin-mobile);
+  padding-top: 80px;
+  padding-bottom: var(--spacing-margin-mobile);
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.heroIcon {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-container-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.title {
+  font: var(--font-headline-lg);
+  letter-spacing: var(--font-headline-lg-letter-spacing);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.description {
+  font: var(--font-body-lg);
+  color: var(--color-on-surface-variant);
+  max-width: 320px;
+  margin: 0;
+}
+
+.playButton {
+  display: block;
+  width: 100%;
+  min-height: var(--spacing-touch-target-min);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: var(--radius-default);
+  font: var(--font-label-xl);
+  letter-spacing: var(--font-label-xl-letter-spacing);
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.playButton:hover {
+  background-color: var(--color-primary-container);
+}
+
+.playButton:active {
+  opacity: 0.9;
+}

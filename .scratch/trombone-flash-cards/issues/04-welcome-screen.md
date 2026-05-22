@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: done
 
 # 04 — Welcome Screen
 
@@ -16,20 +16,20 @@ The screen has: a centred music note icon in a circular container, the app title
 
 ## Acceptance criteria
 
-- [ ] `App.tsx` uses `useReducer` with the `quizState` reducer and initial state
-- [ ] `App.tsx` renders `WelcomeScreen` when `state.screen === 'welcome'`
-- [ ] Welcome Screen displays the app title "Trombone Flash Cards"
-- [ ] Welcome Screen displays a brief explanation of the quiz (note on staff, identify name or position, 20 questions per round)
-- [ ] Welcome Screen displays a "Play" button
-- [ ] Tapping "Play" dispatches `START_ROUND` (transitioning app to `screen: 'playing'`)
-- [ ] A music note icon or similar musical motif is present as a visual hero element
-- [ ] Background is `--color-surface` (`#0f131d`)
-- [ ] App title is in `--color-primary` (brass gold) using the headline-lg typography token
-- [ ] "Play" button is full-width (minus `--spacing-margin-mobile` margins), minimum `--spacing-touch-target-min` height, brass gold background, dark text, `--radius-default` border radius
-- [ ] Layout is centred and works correctly at 390px viewport width
-- [ ] Styles are implemented with CSS Modules (no Tailwind)
-- [ ] `vp check` passes
-- [ ] `vp test` passes
+- [x] `App.tsx` uses `useReducer` with the `quizState` reducer and initial state
+- [x] `App.tsx` renders `WelcomeScreen` when `state.screen === 'welcome'`
+- [x] Welcome Screen displays the app title "Trombone Flash Cards"
+- [x] Welcome Screen displays a brief explanation of the quiz (note on staff, identify name or position, 20 questions per round)
+- [x] Welcome Screen displays a "Play" button
+- [x] Tapping "Play" dispatches `START_ROUND` (transitioning app to `screen: 'playing'`)
+- [x] A music note icon or similar musical motif is present as a visual hero element
+- [x] Background is `--color-surface` (`#0f131d`)
+- [x] App title is in `--color-primary` (brass gold) using the headline-lg typography token
+- [x] "Play" button is full-width (minus `--spacing-margin-mobile` margins), minimum `--spacing-touch-target-min` height, brass gold background, dark text, `--radius-default` border radius
+- [x] Layout is centred and works correctly at 390px viewport width
+- [x] Styles are implemented with CSS Modules (no Tailwind)
+- [x] `vp check` passes
+- [x] `vp test` passes
 
 ## Blocked by
 
