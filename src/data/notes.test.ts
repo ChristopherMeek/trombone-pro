@@ -11,20 +11,20 @@ describe("Note Range", () => {
     expect(NOTE_RANGE[14].vexflowKey).toBe("c/4");
   });
 
-  it("each Note has a name string using the flat symbol ♭, not b", () => {
-    const bFlat2 = NOTE_RANGE[3];
-    expect(bFlat2.name).toBe("B♭");
-    const eFlat3 = NOTE_RANGE[7];
-    expect(eFlat3.name).toBe("E♭");
-    const bFlat3 = NOTE_RANGE[12];
-    expect(bFlat3.name).toBe("B♭");
+  it("each Note has the correct octave", () => {
+    expect(NOTE_RANGE[0].octave).toBe(2); // F2
+    expect(NOTE_RANGE[4].octave).toBe(2); // B2
+    expect(NOTE_RANGE[5].octave).toBe(3); // C3
+    expect(NOTE_RANGE[14].octave).toBe(4); // C4
   });
 
-  it("each Note has a natural name string without accidentals", () => {
-    expect(NOTE_RANGE[0].name).toBe("F");
-    expect(NOTE_RANGE[1].name).toBe("G");
-    expect(NOTE_RANGE[4].name).toBe("B");
-    expect(NOTE_RANGE[5].name).toBe("C");
+  it("each Note has a displayName combining name and octave", () => {
+    expect(NOTE_RANGE[0].displayName).toBe("F2");
+    expect(NOTE_RANGE[3].displayName).toBe("B♭2");
+    expect(NOTE_RANGE[6].displayName).toBe("D3");
+    expect(NOTE_RANGE[7].displayName).toBe("E♭3");
+    expect(NOTE_RANGE[12].displayName).toBe("B♭3");
+    expect(NOTE_RANGE[14].displayName).toBe("C4");
   });
 
   it("each Note has a Canonical Position matching the authoritative table", () => {

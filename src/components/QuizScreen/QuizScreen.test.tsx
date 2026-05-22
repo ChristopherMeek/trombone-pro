@@ -17,8 +17,8 @@ function makePlaying(overrides?: Partial<QuizState>): QuizState {
       },
       {
         noteIndex: 6,
-        type: "position",
-        choices: ["4th", "6th", "2nd"],
+        type: "position" as const,
+        choices: [4, 6, 2],
         correctChoiceIndex: 0,
       },
     ],

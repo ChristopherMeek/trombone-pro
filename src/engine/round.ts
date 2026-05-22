@@ -1,18 +1,8 @@
 import { NOTE_RANGE, getDistractors, type QuestionType } from "../data/notes";
 
-export interface Question {
-  noteIndex: number;
-  type: QuestionType;
-  choices: string[];
-  correctChoiceIndex: number;
-}
-
-function toOrdinal(n: number): string {
-  if (n === 1) return "1st";
-  if (n === 2) return "2nd";
-  if (n === 3) return "3rd";
-  return `${n}th`;
-}
+export type Question =
+  | { type: "name"; noteIndex: number; choices: string[]; correctChoiceIndex: number }
+  | { type: "position"; noteIndex: number; choices: number[]; correctChoiceIndex: number };
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -32,29 +22,31 @@ function buildQuestion(noteIndex: number, type: QuestionType): Question {
   const note = NOTE_RANGE[noteIndex];
   const distractors = getDistractors(noteIndex, type);
 
-  let correctValue: string;
-  let distractorValues: string[];
-
   if (type === "position") {
-    correctValue = toOrdinal(note.canonicalPosition);
-    distractorValues = (distractors as number[]).map(toOrdinal);
+    const entries = shuffle([
+      { value: note.canonicalPosition, isCorrect: true },
+      { value: (distractors as number[])[0], isCorrect: false },
+      { value: (distractors as number[])[1], isCorrect: false },
+    ]);
+    return {
+      type,
+      noteIndex,
+      choices: entries.map((e) => e.value),
+      correctChoiceIndex: entries.findIndex((e) => e.isCorrect),
+    };
   } else {
-    correctValue = note.name;
-    distractorValues = distractors as string[];
+    const entries = shuffle([
+      { value: note.name, isCorrect: true },
+      { value: (distractors as string[])[0], isCorrect: false },
+      { value: (distractors as string[])[1], isCorrect: false },
+    ]);
+    return {
+      type,
+      noteIndex,
+      choices: entries.map((e) => e.value),
+      correctChoiceIndex: entries.findIndex((e) => e.isCorrect),
+    };
   }
-
-  const entries = shuffle([
-    { value: correctValue, isCorrect: true },
-    { value: distractorValues[0], isCorrect: false },
-    { value: distractorValues[1], isCorrect: false },
-  ]);
-
-  return {
-    noteIndex,
-    type,
-    choices: entries.map((e) => e.value),
-    correctChoiceIndex: entries.findIndex((e) => e.isCorrect),
-  };
 }
 
 /**

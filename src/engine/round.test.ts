@@ -63,23 +63,23 @@ describe("generateRound — Question Choices", () => {
     }
   });
 
-  it("for a Position Question, the correct Choice value matches the Note's Canonical Position as an ordinal string", () => {
+  it("for a Position Question, the correct Choice value matches the Note's Canonical Position as a number", () => {
     const round = generateRound();
     const posQuestions = round.filter((q) => q.type === "position");
     for (const q of posQuestions) {
       const note = NOTE_RANGE[q.noteIndex];
-      const expected = toOrdinal(note.canonicalPosition);
-      expect(q.choices[q.correctChoiceIndex]).toBe(expected);
+      expect(q.choices[q.correctChoiceIndex]).toBe(note.canonicalPosition);
     }
   });
 
-  it("for a Position Question, all 3 Choices are ordinal strings", () => {
+  it("for a Position Question, all 3 Choices are integers between 1 and 7", () => {
     const round = generateRound();
     const posQuestions = round.filter((q) => q.type === "position");
-    const ordinalPattern = /^\d+(st|nd|rd|th)$/;
     for (const q of posQuestions) {
       for (const choice of q.choices) {
-        expect(choice).toMatch(ordinalPattern);
+        expect(typeof choice).toBe("number");
+        expect(choice).toBeGreaterThanOrEqual(1);
+        expect(choice).toBeLessThanOrEqual(7);
       }
     }
   });
@@ -97,11 +97,3 @@ describe("generateRound — randomness", () => {
     expect(unique.size).toBeGreaterThan(1);
   });
 });
-
-// Helper used only in tests to verify ordinal display
-function toOrdinal(n: number): string {
-  if (n === 1) return "1st";
-  if (n === 2) return "2nd";
-  if (n === 3) return "3rd";
-  return `${n}th`;
-}

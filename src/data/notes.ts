@@ -1,27 +1,36 @@
 export interface Note {
   name: string;
+  octave: number;
+  displayName: string;
   canonicalPosition: number;
   vexflowKey: string;
 }
 
 export type QuestionType = "name" | "position";
 
+export function toOrdinal(n: number): string {
+  if (n === 1) return "1st";
+  if (n === 2) return "2nd";
+  if (n === 3) return "3rd";
+  return `${n}th`;
+}
+
 export const NOTE_RANGE: Note[] = [
-  { name: "F", canonicalPosition: 6, vexflowKey: "f/2" },
-  { name: "G", canonicalPosition: 4, vexflowKey: "g/2" },
-  { name: "A", canonicalPosition: 2, vexflowKey: "a/2" },
-  { name: "B♭", canonicalPosition: 1, vexflowKey: "bb/2" },
-  { name: "B", canonicalPosition: 7, vexflowKey: "b/2" },
-  { name: "C", canonicalPosition: 6, vexflowKey: "c/3" },
-  { name: "D", canonicalPosition: 4, vexflowKey: "d/3" },
-  { name: "E♭", canonicalPosition: 3, vexflowKey: "eb/3" },
-  { name: "E", canonicalPosition: 2, vexflowKey: "e/3" },
-  { name: "F", canonicalPosition: 1, vexflowKey: "f/3" },
-  { name: "G", canonicalPosition: 4, vexflowKey: "g/3" },
-  { name: "A", canonicalPosition: 2, vexflowKey: "a/3" },
-  { name: "B♭", canonicalPosition: 1, vexflowKey: "bb/3" },
-  { name: "B", canonicalPosition: 4, vexflowKey: "b/3" },
-  { name: "C", canonicalPosition: 3, vexflowKey: "c/4" },
+  { name: "F", octave: 2, displayName: "F2", canonicalPosition: 6, vexflowKey: "f/2" },
+  { name: "G", octave: 2, displayName: "G2", canonicalPosition: 4, vexflowKey: "g/2" },
+  { name: "A", octave: 2, displayName: "A2", canonicalPosition: 2, vexflowKey: "a/2" },
+  { name: "B♭", octave: 2, displayName: "B♭2", canonicalPosition: 1, vexflowKey: "bb/2" },
+  { name: "B", octave: 2, displayName: "B2", canonicalPosition: 7, vexflowKey: "b/2" },
+  { name: "C", octave: 3, displayName: "C3", canonicalPosition: 6, vexflowKey: "c/3" },
+  { name: "D", octave: 3, displayName: "D3", canonicalPosition: 4, vexflowKey: "d/3" },
+  { name: "E♭", octave: 3, displayName: "E♭3", canonicalPosition: 3, vexflowKey: "eb/3" },
+  { name: "E", octave: 3, displayName: "E3", canonicalPosition: 2, vexflowKey: "e/3" },
+  { name: "F", octave: 3, displayName: "F3", canonicalPosition: 1, vexflowKey: "f/3" },
+  { name: "G", octave: 3, displayName: "G3", canonicalPosition: 4, vexflowKey: "g/3" },
+  { name: "A", octave: 3, displayName: "A3", canonicalPosition: 2, vexflowKey: "a/3" },
+  { name: "B♭", octave: 3, displayName: "B♭3", canonicalPosition: 1, vexflowKey: "bb/3" },
+  { name: "B", octave: 3, displayName: "B3", canonicalPosition: 4, vexflowKey: "b/3" },
+  { name: "C", octave: 4, displayName: "C4", canonicalPosition: 3, vexflowKey: "c/4" },
 ];
 
 /**

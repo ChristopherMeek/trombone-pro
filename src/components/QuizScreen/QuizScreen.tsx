@@ -1,26 +1,12 @@
 import { type Dispatch } from "react";
 import type { QuizState, Action } from "../../engine/quizState";
-import { NOTE_RANGE } from "../../data/notes";
+import { NOTE_RANGE, toOrdinal } from "../../data/notes";
 import { StaffDisplay } from "../StaffDisplay/StaffDisplay";
 import styles from "./QuizScreen.module.css";
 
 interface QuizScreenProps {
   state: QuizState;
   dispatch: Dispatch<Action>;
-}
-
-function toOrdinal(n: number): string {
-  if (n === 1) return "1st";
-  if (n === 2) return "2nd";
-  if (n === 3) return "3rd";
-  return `${n}th`;
-}
-
-/** Returns the note name with octave, e.g. "D3", "B♭2" */
-function noteNameWithOctave(noteIndex: number): string {
-  const note = NOTE_RANGE[noteIndex];
-  const octave = note.vexflowKey.split("/")[1];
-  return `${note.name}${octave}`;
 }
 
 function getChoiceResult(
@@ -46,7 +32,7 @@ export function QuizScreen({ state, dispatch }: QuizScreenProps) {
     question.type === "name" ? "What is the note name?" : "What is the slide position?";
 
   const feedbackAnnotation = isFeedback
-    ? `${noteNameWithOctave(question.noteIndex)} — ${toOrdinal(note.canonicalPosition)} position`
+    ? `${note.displayName} — ${toOrdinal(note.canonicalPosition)} position`
     : null;
 
   return (
@@ -90,7 +76,7 @@ export function QuizScreen({ state, dispatch }: QuizScreenProps) {
               >
                 {result === "correct" && <span className={styles.icon}>✓</span>}
                 {result === "incorrect" && <span className={styles.icon}>✗</span>}
-                {choice}
+                {question.type === "position" ? toOrdinal(choice as number) : (choice as string)}
               </button>
             );
           })}
