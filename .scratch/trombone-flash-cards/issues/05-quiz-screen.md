@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: done
 
 # 05 — Quiz Screen
 
@@ -24,38 +24,38 @@ Do NOT implement the navigation bar, hamburger menu, or settings icon visible in
 
 ### StaffDisplay
 
-- [ ] Renders a VexFlow bass clef Staff for a given note from the Note Range
-- [ ] Uses the note's `vexflowKey` from `src/data/notes.ts` for VexFlow rendering
-- [ ] Renders correctly for all 15 notes including ledger lines (F2, C4) and accidentals (B♭2, E♭3, B♭3)
-- [ ] Cleans up the VexFlow renderer on unmount (no memory leaks)
-- [ ] Displayed on a dark card surface matching the design
+- [x] Renders a VexFlow bass clef Staff for a given note from the Note Range
+- [x] Uses the note's `vexflowKey` from `src/data/notes.ts` for VexFlow rendering
+- [x] Renders correctly for all 15 notes including ledger lines (F2, C4) and accidentals (B♭2, E♭3, B♭3)
+- [x] Cleans up the VexFlow renderer on unmount (no memory leaks)
+- [x] Displayed on a dark card surface matching the design
 
 ### Quiz Screen — active state
 
-- [ ] Shows "QUESTION {n} OF 20" progress indicator
-- [ ] Shows a thin brass gold progress bar at the top reflecting current progress through the Round
-- [ ] Shows the question label: "What is the note name?" or "What is the slide position?" depending on Question type, in `--color-primary`
-- [ ] Renders `StaffDisplay` for the current Question's Note
-- [ ] Shows exactly 3 Choice buttons in the shuffled display order from the Question
-- [ ] Choice buttons are full-width, minimum `--spacing-touch-target-min` height, dark background (`--color-surface-container-high`), white text, `--radius-default` border radius
-- [ ] Tapping a Choice button dispatches `SELECT_CHOICE` with the choice index
+- [x] Shows "QUESTION {n} OF 20" progress indicator
+- [x] Shows a thin brass gold progress bar at the top reflecting current progress through the Round
+- [x] Shows the question label: "What is the note name?" or "What is the slide position?" depending on Question type, in `--color-primary`
+- [x] Renders `StaffDisplay` for the current Question's Note
+- [x] Shows exactly 3 Choice buttons in the shuffled display order from the Question
+- [x] Choice buttons are full-width, minimum `--spacing-touch-target-min` height, dark background (`--color-surface-container-high`), white text, `--radius-default` border radius
+- [x] Tapping a Choice button dispatches `SELECT_CHOICE` with the choice index
 
 ### Quiz Screen — feedback state
 
-- [ ] The chosen Choice button turns red (`--color-incorrect: #F87171`) with an ✗ icon if incorrect
-- [ ] The correct Choice button turns green (`--color-correct: #4ADE80`) with a ✓ icon
-- [ ] The unchosen, non-correct button is visually dimmed/inactive
-- [ ] A feedback annotation is shown below the buttons in `--color-primary`: "{Note Name} — {n}th position" (e.g. "D3 — 4th position")
-- [ ] A full-width "Next →" button is shown in brass gold
-- [ ] Tapping "Next →" dispatches `NEXT_QUESTION`
-- [ ] Choice buttons are non-interactive in the feedback state (no double-submission)
+- [x] The chosen Choice button turns red (`--color-incorrect: #F87171`) with an ✗ icon if incorrect
+- [x] The correct Choice button turns green (`--color-correct: #4ADE80`) with a ✓ icon
+- [x] The unchosen, non-correct button is visually dimmed/inactive
+- [x] A feedback annotation is shown below the buttons in `--color-primary`: "{Note Name} — {n}th position" (e.g. "D3 — 4th position")
+- [x] A full-width "Next →" button is shown in brass gold
+- [x] Tapping "Next →" dispatches `NEXT_QUESTION`
+- [x] Choice buttons are non-interactive in the feedback state (no double-submission)
 
 ### General
 
-- [ ] Layout works correctly at 390px viewport width
-- [ ] Styles are implemented with CSS Modules (no Tailwind)
-- [ ] `vp check` passes
-- [ ] `vp test` passes
+- [x] Layout works correctly at 390px viewport width
+- [x] Styles are implemented with CSS Modules (no Tailwind)
+- [x] `vp check` passes
+- [x] `vp test` passes
 
 ## Blocked by
 

@@ -1,6 +1,8 @@
 import { useReducer } from "react";
 import { reducer, initialState } from "./engine/quizState";
 import { WelcomeScreen } from "./components/WelcomeScreen/WelcomeScreen";
+import { QuizScreen } from "./components/QuizScreen/QuizScreen";
+import { SummaryScreen } from "./components/SummaryScreen/SummaryScreen";
 
 export function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -9,10 +11,13 @@ export function App() {
     return <WelcomeScreen onPlay={() => dispatch({ type: "START_ROUND" })} />;
   }
 
-  // Remaining screens (playing, feedback, summary) are out of scope for this iteration
-  return (
-    <div id="app-shell">
-      <p>Screen: {state.screen}</p>
-    </div>
-  );
+  if (state.screen === "playing" || state.screen === "feedback") {
+    return <QuizScreen state={state} dispatch={dispatch} />;
+  }
+
+  if (state.screen === "summary") {
+    return <SummaryScreen />;
+  }
+
+  return null;
 }

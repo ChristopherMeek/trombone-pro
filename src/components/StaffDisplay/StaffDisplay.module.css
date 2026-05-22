@@ -1,0 +1,18 @@
+.card {
+  background-color: var(--color-surface-container-high);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staffContainer {
+  width: 260px;
+  height: 140px;
+  overflow: visible;
+}
+
+.staffContainer svg {
+  display: block;
+}
