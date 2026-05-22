@@ -16,3 +16,21 @@
 .staffContainer svg {
   display: block;
 }
+
+/* Force all VexFlow SVG elements to use the same colour as the rest of the
+   staff. Ledger lines in particular can be rendered with a different inline
+   stroke, so !important is required to override VexFlow's inline styles. */
+.staffContainer svg path,
+.staffContainer svg line,
+.staffContainer svg rect,
+.staffContainer svg ellipse,
+.staffContainer svg polyline,
+.staffContainer svg polygon {
+  stroke: var(--color-on-surface) !important;
+}
+
+.staffContainer svg path:not([fill="none"]),
+.staffContainer svg ellipse:not([fill="none"]),
+.staffContainer svg rect:not([fill="none"]) {
+  fill: var(--color-on-surface) !important;
+}
