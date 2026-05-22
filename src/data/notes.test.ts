@@ -29,7 +29,7 @@ describe("Note Range", () => {
 
   it("each Note has a Canonical Position matching the authoritative table", () => {
     const positions = NOTE_RANGE.map((n) => n.canonicalPosition);
-    expect(positions).toEqual([6, 4, 2, 1, 7, 6, 4, 3, 2, 1, 4, 2, 1, 4, 6]);
+    expect(positions).toEqual([6, 4, 2, 1, 7, 6, 4, 3, 2, 1, 4, 2, 1, 4, 3]);
   });
 
   it("each Note has a vexflowKey string in bass-clef format", () => {

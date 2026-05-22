@@ -21,7 +21,7 @@ export const NOTE_RANGE: Note[] = [
   { name: "A", canonicalPosition: 2, vexflowKey: "a/3" },
   { name: "B♭", canonicalPosition: 1, vexflowKey: "bb/3" },
   { name: "B", canonicalPosition: 4, vexflowKey: "b/3" },
-  { name: "C", canonicalPosition: 6, vexflowKey: "c/4" },
+  { name: "C", canonicalPosition: 3, vexflowKey: "c/4" },
 ];
 
 /**

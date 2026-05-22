@@ -59,7 +59,7 @@ The Canonical Position for each Note in the Note Range is:
 | A2   | 2nd      |     | A3   | 2nd      |
 | B♭2  | 1st      |     | B♭3  | 1st      |
 | B2   | 7th      |     | B3   | 4th      |
-| C3   | 6th      |     | C4   | 6th      |
+| C3   | 6th      |     | C4   | 3rd      |
 | D3   | 4th      |     |      |          |
 | E♭3  | 3rd      |     |      |          |
 | E3   | 2nd      |     |      |          |
